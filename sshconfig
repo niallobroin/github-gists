@@ -1,0 +1,9 @@
+#Use to connect through a machine.  Handy if conneting through a headnode on a cluster.
+
+
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+
+Host gpu* ca*
+ProxyCommand ssh noor2 -W %h:%p
