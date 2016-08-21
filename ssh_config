@@ -3,5 +3,5 @@ Host *
 ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
 
-Host gpu* ca*
-ProxyCommand ssh noor2 -W %h:%p
+Host gpu*
+ProxyCommand ssh headnode -W %h:%p
